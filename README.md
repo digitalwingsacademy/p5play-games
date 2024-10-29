@@ -17,9 +17,20 @@ In this repository, you will find a collection of games designed primarily for e
 
 ## Games
 1. **Pumpkin Catcher**: A fun game where players catch flying pumpkins to score points.
+   
+    <img src="images/caza_calabaza.png" alt="Pumpkin Catcher" width="400"/>
+
 2. **Card Matching Game**: A memory game where players flip cards to find pairs.
+   
+   <img src="images/cartas.png" alt="Pumpkin Catcher" width="400"/>
+
 3. **Lantern in the Night**: A spooky game where players use a flashlight to find hidden objects.
-4. **Harry Potter Pumpkin Collector**: Help Harry Potter move left and right to collect falling pumpkins while avoiding dementors. 
+   
+   <img src="images/linterna_noche.png" alt="Pumpkin Catcher" width="400"/>
+   
+4. **Harry Potter Pumpkin Collector**: Help Harry Potter move left and right to collect falling pumpkins while avoiding dementors.
+   
+   <img src="images/harry_potter.png" alt="Pumpkin Catcher" width="400"/>
 
 Each game comes with a set of missions or challenges to enhance the learning experience.
 
