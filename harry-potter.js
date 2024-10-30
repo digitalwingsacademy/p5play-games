@@ -1,4 +1,4 @@
-let harry;
+let player;
 let dementors = [];
 let pumpkins = [];
 let score = 0;
@@ -7,7 +7,7 @@ let gameOver = false;
 let harryImg, dementorImg, pumpkinImg, bgImg;
 
 function preload() {
-  // Cargar imágenes actualizadas
+  // Cargar imágenes
   harryImg = loadImage('https://storage.googleapis.com/imagenes_digital_wings/Harry_Potter_character_poster-removebg-preview.png'); // Imagen de Harry Potter
   dementorImg = loadImage('https://storage.googleapis.com/imagenes_digital_wings/figura-articulada-dementor-star-ace-16-cm-harry-potter-removebg-preview.png'); // Imagen de Dementor
   pumpkinImg = loadImage('https://storage.googleapis.com/imagenes_digital_wings/calabaza-halloween-removebg-preview.png'); // Imagen de calabaza
@@ -15,26 +15,24 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(600, 400);
-  //canvas.parent('gameContainer');
+  createCanvas(600, 400);
   
   // Crear a Harry Potter
-  harry = createSprite(300, height - 40);
-  harry.addImage(harryImg);
-  harry.scale = 0.3; // Ajuste de escala para que se vea bien
+  player = createSprite(300, height - 40);
+  player.addImage(harryImg);
+  player.scale = 0.3; // Ajuste de escala para que se vea bien
   
   // Crear dementores
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 1; i++) {
     let dementor = createSprite(random(50, width - 50), random(-200, -50));
     dementor.addImage(dementorImg);
-    dementor.scale = 0.15;
+    dementor.scale = 0.1;
     dementor.velocity.y = 4;
     dementors.push(dementor);
   }
   
   // Crear calabazas
-  for (let i = 0; i < 5; i++) {
-
+  for (let i = 0; i < 4; i++) {
     let pumpkin = createSprite(random(50, width - 50), random(-200, -50));
     pumpkin.addImage(pumpkinImg);
     pumpkin.scale = 0.1; // Tamaño adecuado para que sea visible
@@ -52,16 +50,17 @@ function draw() {
     fill(255);
     text('Puntos: ' + score, 10, 30);
     
-    // Mover a Harry Potter con las flechas del teclado
-    if (keyIsDown(LEFT_ARROW)) {
-      harry.position.x -= 5;
-    }
-    if (keyIsDown(RIGHT_ARROW)) {
-      harry.position.x += 5;
+    // Mover a Harry Potter al hacer clic en la parte izquierda o derecha
+    if (mouseIsPressed) {
+      if (mouseX < width / 2) {
+        player.position.x -= 5; // Mover a la izquierda
+      } else {
+        player.position.x += 5; // Mover a la derecha
+      }
     }
     
     // Evitar que Harry salga de la pantalla
-    harry.position.x = constrain(harry.position.x, 20, width - 20);
+    player.position.x = constrain(player.position.x, 20, width - 20);
     
     // Mover dementores y calabazas
     for (let dementor of dementors) {
@@ -72,7 +71,7 @@ function draw() {
       }
       
       // Fin del juego si Harry toca un dementor
-      if (harry.overlap(dementor)) {
+      if (player.overlap(dementor)) {
         gameOver = true;
       }
     }
@@ -85,7 +84,7 @@ function draw() {
       }
       
       // Si Harry toca una calabaza, suma puntos y desaparece
-      if (harry.overlap(pumpkin)) {
+      if (player.overlap(pumpkin)) {
         score += 1;
         pumpkin.position.y = random(-200, -50);
         pumpkin.position.x = random(50, width - 50);
