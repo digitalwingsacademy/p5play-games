@@ -9,6 +9,7 @@ This project is dedicated to showcasing various games we have created using the 
 - [Games](#games)
 - [Technologies Used](#technologies-used)
 - [How to Run the Games](#how-to-run-the-games)
+- [Learning Objectives](#learning-objectives)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -22,15 +23,19 @@ In this repository, you will find a collection of games designed primarily for e
 
 2. **Card Matching Game**: A memory game where players flip cards to find pairs.
    
-   <img src="images/cartas.png" alt="Pumpkin Catcher" width="400"/>
+    <img src="images/cartas.png" alt="Card Matching Game" width="400"/>
 
 3. **Lantern in the Night**: A spooky game where players use a flashlight to find hidden objects.
    
-   <img src="images/linterna_noche.png" alt="Pumpkin Catcher" width="400"/>
-   
+    <img src="images/linterna_noche.png" alt="Lantern in the Night" width="400"/>
+
 4. **Harry Potter Pumpkin Collector**: Help Harry Potter move left and right to collect falling pumpkins while avoiding dementors.
    
-   <img src="images/harry_potter.png" alt="Pumpkin Catcher" width="400"/>
+    <img src="images/harry_potter.png" alt="Harry Potter Pumpkin Collector" width="400"/>
+
+5. **Dragon Catcher**: Join the quest to catch the elusive digital dragon named Byte! Move quickly and click on the dragon to score points before the time runs out.
+   
+    <img src="images/dragon.png" alt="Dragon Catcher" width="400"/>
 
 Each game comes with a set of missions or challenges to enhance the learning experience.
 
